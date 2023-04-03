@@ -22,10 +22,9 @@ const {
 
 async function invokeAction({ action, id, name, email, phone }) {
   console.log("action", action);
-  const list = JSON.parse(await listContacts());
   switch (action) {
     case "list":
-      console.table(list);
+      console.table(JSON.parse(await listContacts()));
       break;
     case "get":
       console.table(await getContactById(id));
@@ -33,12 +32,12 @@ async function invokeAction({ action, id, name, email, phone }) {
 
     case "add":
       await addContact(name, email, phone);
-      console.table(list);
+      console.table(JSON.parse(await listContacts()));
       break;
 
     case "remove":
       await removeContact(id);
-      console.table(list);
+      console.table(JSON.parse(await listContacts()));
       break;
 
     default:
@@ -46,4 +45,3 @@ async function invokeAction({ action, id, name, email, phone }) {
   }
 }
 invokeAction(argv);
-
