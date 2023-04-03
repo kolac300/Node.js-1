@@ -1,0 +1,24 @@
+{
+  "name": "node.js-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "color": "^4.2.3",
+    "colors": "^1.4.0",
+    "comander": "^0.0.1-security",
+    "commander": "^10.0.0",
+    "express": "^4.18.2",
+    "nanoid": "^4.0.2",
+    "nodemon": "^2.0.22",
+    "uid": "^2.0.2",
+    "yargs": "^17.7.1"
+  }
+}
